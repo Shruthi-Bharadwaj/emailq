@@ -26,8 +26,9 @@ exports.create = (req, res) => {
           <Type>Sender</Type>
           <Code>AlreadyExists</Code>
           <Message>Template ${template.TemplateName} already exists for account id ${AccountId}${
-  e.name === 'SequelizeUniqueConstraintError' ? '500' : ''
-}</Message>
+        e.name === 'SequelizeUniqueConstraintError' ? '500' : ''
+      }</Message>
+
         </Error>
         <RequestId>5f56719f-46d1-11e8-b0e5-6f6c0c46ee34</RequestId>
       </ErrorResponse>`;
