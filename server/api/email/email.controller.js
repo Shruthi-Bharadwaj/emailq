@@ -1,4 +1,3 @@
-
 const Ajv = require('ajv');
 const _ = require('lodash');
 const debug = require('debug');
@@ -118,7 +117,7 @@ exports.create = (req, res) => nodeMailer(req.body)
     const rs = createxmlSuccess.replace('{{messageId}}', r.messageId);
     return res.end(rs);
   })
-// eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   .catch(e => res.end(createxmlError));
 
 exports.SendBulkTemplatedEmail = (req, res, next) => {
@@ -166,7 +165,6 @@ exports.SendBulkTemplatedEmail = (req, res, next) => {
 
       return Promise.all(promises).then((ress) => {
         const response = ress.map(r => responseXML.replace('{{MessageId}}', r.messageId)).join('');
-
 
         res.end(bulkTemplatedEmailSuccessXML.replace('{{response}}', response));
       })

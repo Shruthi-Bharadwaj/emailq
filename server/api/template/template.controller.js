@@ -1,6 +1,7 @@
 const { Template } = require('../../conn/sqldb');
 const { AccountId } = require('../../config/environment');
 const unflatten = require('../../components/utils/unflatten');
+const templateXMLResponses = require('./template.responses');
 
 exports.index = (req, res, next) => Template
   .findAll({ raw: true }).then(templates => res.json(templates)).catch(next);
@@ -75,5 +76,23 @@ exports.update = (req, res) => {
         'content-type': 'text/xml',
       }).status(400).end(errorXml);
     });
+};
+
+exports.listTemplates = (req, res, next) => {
+  let limit = 10;
+  if (req.body.MaxItems) {
+    limit = (req.body.MaxItems < 1 || req.body.MaxItems > 10) ? 10 : Number(req.body.MaxItems);
+  }
+  const offset = (req.body.NextToken) ? Number(req.body.NextToken) : 0;
+  Promise.all([Template.findAll({ limit, offset, raw: true }), Template.count()])
+    .then(([templates, totalCount]) => {
+      const allTemplatesData = templates.map((template) => {
+        let replacedXML = templateXMLResponses.templatesXML.replace('{{templateName}}', template.TemplateName);
+        replacedXML = replacedXML.replace('{{templateCreatedOn}}', new Date(template.CreatedAt).toISOString());
+        return replacedXML;
+      });
+      res.send(
+        templateXMLResponses.listTemplatesXMLResponse(allTemplatesData, limit, offset, totalCount));
+    }).catch(err => next(err));
 };
 

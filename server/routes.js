@@ -12,18 +12,17 @@ const EmailCtrl = require('./api/email/email.controller');
 const template = require('./api/template');
 const logger = require('./components/logger');
 
-const log = debug('emailq.routes');
-
 module.exports = (app) => {
   app.use('/', (req, res, next) => {
+    // console.log('req == ', req);
     if (req.method !== 'POST') return next();
-    log('request', req.body.Action);
     switch (req.body.Action) {
       case 'CreateTemplate': return TemplateCtrl.create(req, res, next);
       case 'SendEmail': return EmailCtrl.create(req, res, next);
       case 'SendBulkTemplatedEmail': return EmailCtrl.SendBulkTemplatedEmail(req, res, next);
       case 'SendTemplatedEmail': return EmailCtrl.SendTemplatedEmail(req, res, next);
       case 'UpdateTemplate': return TemplateCtrl.update(req, res, next);
+      case 'ListTemplates': return TemplateCtrl.listTemplates(req, res, next);
       default: return next();
     }
   });

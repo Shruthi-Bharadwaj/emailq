@@ -6,6 +6,6 @@
     "airbnb/base"
   ],
   "env": {
-    "mocha": true,
+    "mocha": true
   }
 }

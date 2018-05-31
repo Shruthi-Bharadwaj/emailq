@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "node ./node_modules/sequelize-cli/lib/sequelize db:migrate",
-    "test": "mocha server/api/**/*.spec.js",
+    "test": "mocha --opts .mocharc server/**/*.spec.js --exit",
     "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
     "sequlize": "sequelize db:migrate",
     "dev": "nodemon --ignore node_modules/ -e js ./server/app",
@@ -15,11 +15,14 @@
     "send-email": "aws ses send-email   --from \"john@gmail.com\"   --destination \"ToAddresses=manjeshpv@gmail.com\"   --message \"Subject={Data=from ses,Charset=utf8},Body={Text={Data=ses says hi,Charset=utf8},Html={Data=,Charset=utf8}}\" --endpoint-url http://localhost:1587 --debug",
     "send-templated-email": "aws ses send-templated-email --cli-input-json file://server/api/email/data/sendTemplatedEmail.cmd.json --endpoint-url http://localhost:1587 --debug",
     "send-bulk-templated-email": "aws ses send-bulk-templated-email --cli-input-json file://server/api/template/data/blukemail.cmd.json --endpoint-url http://localhost:1587 --debug",
-    "awscreate-template": "aws ses create-template --cli-input-json file://server/api/template/data/CreateTemplate.cmd.json  --debug",
-    "awsupdate-template": "aws ses update-template --cli-input-json file://server/api/template/data/CreateTemplate.cmd.json --debug",
-    "awssend-email": "aws ses send-email   --from \"john@gmail.com\"   --destination \"ToAddresses=manjeshpv@gmail.com\" --message \"Subject={Data=from ses,Charset=utf8},Body={Text={Data=ses says hi,Charset=utf8},Html={Data=,Charset=utf8}}\"  --debug",
-    "awssend-templated-email": "aws ses send-templated-email --cli-input-json file://server/api/email/data/sendTemplatedEmail.cmd.json --debug",
-    "awssend-bulk-templated-email": "aws ses send-bulk-templated-email --cli-input-json file://server/api/template/data/blukemail.cmd.json  --debug",
+    "list-templates": "aws ses list-templates --cli-input-json file://server/api/template/data/listTemplates.cmd.json  --endpoint-url http://localhost:1587 --debug",
+    "aws-update-template": "aws ses update-template --cli-input-json file://server/api/template/data/CreateTemplate.cmd.json --debug",
+    "aws-create-template": "aws ses create-template --cli-input-json file://server/api/template/data/CreateTemplate.cmd.json  --debug",
+    "aws-send-email": "aws ses send-email   --from \"john@gmail.com\"   --destination \"ToAddresses=manjeshpv@gmail.com\" --message \"Subject={Data=from ses,Charset=utf8},Body={Text={Data=ses says hi,Charset=utf8},Html={Data=,Charset=utf8}}\"  --debug",
+    "aws-send-templated-email": "aws ses send-templated-email --cli-input-json file://server/api/email/data/sendTemplatedEmail.cmd.json --debug",
+    "aws-send-bulk-templated-email": "aws ses send-bulk-templated-email --cli-input-json file://server/api/template/data/blukemail.cmd.json  --debug",
+    "aws-list-templates": "aws ses list-templates --cli-input-json file://server/api/template/data/listTemplates.cmd.json  --debug",
+    "aws-delete-templates": "aws ses delete-template --cli-input-json file://server/api/template/data/deleteTemplate.cmd.json  --debug",
     "validate": "npm ls"
   },
   "pre-commit": [
