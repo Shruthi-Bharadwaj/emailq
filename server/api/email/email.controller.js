@@ -6,6 +6,7 @@ const addressparser = require('addressparser');
 
 const nodeMailer = require('../../conn/nodeMailer');
 const { Template } = require('../../conn/sqldb');
+const StatsService = require('../stats/stats.service');
 const {
   blankDestination, blankToErrorXml, successXML, templateNotExistXml, addressNotVerifiedErrorXML,
   wrongEmailxml, bulkTemplatedEmailSuccessXML, createxmlSuccess, createxmlError,
@@ -103,11 +104,12 @@ exports.SendTemplatedEmail = (req, res, next) => {
         },
       };
 
-      return nodeMailer(email, req.body.Template)
-        .then((r) => {
-          log('email sent', r);
-          res.end(successXML.replace('{{MessageId}}', r.messageId));
-        });
+      return [nodeMailer(email, req.body.Template), template];
+    }).then(([r, template]) => {
+      log('email sent', r);
+      const stats = new StatsService(template.id);
+      stats.setDeliveryStats();
+      res.end(successXML.replace('{{MessageId}}', r.messageId));
     })
     .catch(next);
 };

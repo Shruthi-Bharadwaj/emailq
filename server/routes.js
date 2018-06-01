@@ -2,7 +2,6 @@
 /**
  * Main application routes
  */
-const debug = require('debug');
 const { name, version } = require('../package.json');
 
 const { IDENTITY } = require('./config/environment');
