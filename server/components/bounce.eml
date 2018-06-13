@@ -1,0 +1,704 @@
+Return-Path: <>
+Delivered-To: info@service.head-honchos.com
+Received: from mailer1.head-honchos.com
+	by mailer1.head-honchos.com with LMTP id kGJuDR0uRls/KgAAzLeOFA
+	for <info@service.head-honchos.com>; Wed, 11 Jul 2018 21:49:41 +0530
+Return-path: <>
+Envelope-to: info@service.head-honchos.com
+Delivery-date: Wed, 11 Jul 2018 21:49:41 +0530
+Received: from relay1.soft.net ([164.164.128.17]:50066)
+	by mailer1.head-honchos.com with esmtps (TLSv1.2:ECDHE-RSA-AES256-GCM-SHA384:256)
+	(Exim 4.91)
+	id 1fdHq8-0002o3-Ax
+	for info@service.head-honchos.com; Wed, 11 Jul 2018 21:49:41 +0530
+Received: from localhost (localhost)
+	by relay1.soft.net (8.14.7/8.14.7) id w6AM2E2Z020287;
+	Wed, 11 Jul 2018 21:48:56 +0530
+Date: Wed, 11 Jul 2018 21:48:56 +0530
+From: Mail Delivery Subsystem <MAILER-DAEMON@relay1.soft.net>
+Message-Id: <201807111618.w6AM2E2Z020287@relay1.soft.net>
+To: <info@service.head-honchos.com>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="w6AM2E2Z020287.1531325936/relay1.soft.net"
+Subject: Returned mail: see transcript for details
+Auto-Submitted: auto-generated (failure)
+
+This is a MIME-encapsulated message
+
+--w6AM2E2Z020287.1531325936/relay1.soft.net
+
+The original message was received at Fri, 6 Jul 2018 21:16:53 +0530
+from mailer1.head-honchos.com [74.207.244.57]
+
+   ----- The following addresses had permanent fatal errors -----
+<shekars@arisglobal.co.in>
+
+   ----- Transcript of session follows -----
+<shekars@arisglobal.co.in>... Deferred: Connection timed out with mails2.arisglobal.co.in.
+Message could not be delivered for 5 days
+Message will be deleted from queue
+
+--w6AM2E2Z020287.1531325936/relay1.soft.net
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; relay1.soft.net
+Arrival-Date: Fri, 6 Jul 2018 21:16:53 +0530
+
+Final-Recipient: RFC822; shekars@arisglobal.co.in
+Action: failed
+Status: 4.4.7
+Remote-MTA: DNS; mails2.arisglobal.co.in
+Last-Attempt-Date: Wed, 11 Jul 2018 21:48:55 +0530
+
+--w6AM2E2Z020287.1531325936/relay1.soft.net
+Content-Type: message/rfc822
+
+Return-Path: <info@service.head-honchos.com>
+Received: from mailer1.head-honchos.com (mailer1.head-honchos.com [74.207.244.57])
+	by relay1.soft.net (8.14.7/8.14.7) with ESMTP id w66FkpDD029666
+	for <shekars@arisglobal.co.in>; Fri, 6 Jul 2018 21:16:53 +0530
+Received: (Haraka outbound); Fri, 06 Jul 2018 21:15:15 +0530
+Authentication-Results: mailer1.head-honchos.com; auth=pass (plain)
+Received: from mailer1.head-honchos.com (localhost.localdomain [127.0.0.1])
+	by mailer1.head-honchos.com (Haraka/2.8.4) with ESMTPSA id 8E80E077-DD53-49BF-A2C9-A86723E5A718.1
+	envelope-from <info@service.head-honchos.com> (authenticated bits=0)
+	(version=TLSv1/SSLv3 cipher=ECDHE-RSA-AES128-GCM-SHA256 verify=NO);
+	Fri, 06 Jul 2018 21:15:15 +0530
+Content-Type: multipart/alternative;
+ boundary="--_NmP-9639a1ff3920fdc8-Part_1"
+From: HeadHonchos News <info@service.head-honchos.com>
+To: shekars@arisglobal.co.in
+Subject: How to turn your side job into your main one
+Message-ID: <ff101198-5d23-aa20-caf7-fdbae4fa1c09@service.head-honchos.com>
+Date: Fri, 06 Jul 2018 15:45:15 +0000
+MIME-Version: 1.0
+DKIM-Signature: v=1;a=rsa-sha256;bh=szW0LsdKcoaEbperGIVSq5fnr8tHvvYIwEEU9jAZH2Q=;c=relaxed/simple;d=service.head-honchos.com;h=from:subject:date:message-id:to:mime-version;s=jun2018;b=P3as0sFJmAVW3Oqcr6QTSzIe3Jf0TQuMIVB1z2uemxNTbC8UAxlKfZeDayuKeQ5erUYMUAyZFf+9z38HTlun82qnt0dE+2u6DjtcqOOJhmn5rO49a5GlMbkbUy6GO4emKG9EIETXbMoP5XK5B0LbqUP986vlUUj8qXLsWzJTmZLuOIF/uxVbux0ouglq2tyCj7Ygm0bxLQ3JVsA7aOt90UDYfd4TAMFrxl5LpHRJTyW2FAseHYXD9b92rQKaa2gAIYJYICpHYwKwqpsHYhCco3q+kNU6KdJfBTZa4mY/nzpxDNz8T5SUF74w/ozsbxyL8KIwn6Jc3GcmCtG9WndJVQ==
+
+----_NmP-9639a1ff3920fdc8-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ Daily Updates on Career, Startups & Business 06 July 2018 [https://cdn.=
+quezx.com/img/hh/mailer/newsletter/hh-logo-white.png]
+ [https://cdn.quezx.com/img/hh/mailer/newsletter/hh-top-banner.png]
+[https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f264-418c-=
+a73e-52c89068339c&linkId=3D290]
+ [https://cdn.quezx.=
+com/img/hh/mailer/newsletter/career.png] Career How to
+slowly convert your side job into your main one
+[https://news.headhonchos.=
+com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=
+=3D291]
+ The Muse - Have the courage to be consistent and focussed on what =
+you wish to
+do
+- Do your research on how you can scale it up
+- Don=E2=80=99t rush into it. Ensure you are financially healthy and can =
+sustain
+yourself through the job
+- Be seriously involved before you quit =
+your full-time job.=20
+[https://cdn.quezx.com/img/hh/mailer/newsletter/star=
+tup.png] Startups Lending
+company LoanTap rakes in $6.2 mn
+[https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f264-418c-=
+a73e-52c89068339c&linkId=3D292]
+ Inc42 LoanTap, another lending company, =
+has raised $6.2 million in an equity
+round. It gives flexible EMI free loan=
+ products to salaried professionals. The
+RBI-registered NBFC provides a =
+variety of facility such as overdraft, credit
+card takeover loan, advance =
+salary loan, consumer durable loan, etc.=20
+Lifestyle buys 29.9% in Koovs
+[https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f264-418c-=
+a73e-52c89068339c&linkId=3D293]
+ Livemint Kishore Biyani=E2=80=99s =
+Lifestyle has bought a 29.9% in online fashion brand
+Koovs for Rs 140 crore. Biyani wants to have a large presence in the online
+fashion space. Lifestyle operates about 400 stores. This deal will see
+cross-selling of the brands on each other=E2=80=99s online and offline =
+spaces.=20
+[https://cdn.quezx.com/img/hh/mailer/newsletter/business.png] =
+Business Google
+Wi-Fi to go beyond stations
+[https://news.headhonchos.=
+com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=
+=3D294]
+ ET Google is all set to take its free internet service for India =
+beyond railway
+stations. It intends to target malls, universities and cafes=
+ as well. Google is
+in talks with telcos, ISPs and state governments to =
+make it available. 400
+railway stations currently have Google branded wifi =
+services in partnership with
+RailTel.=20
+Ikea bullish on e-commerce from =
+Mumbai
+[https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f26=
+4-418c-a73e-52c89068339c&linkId=3D295]
+ ET Ikea is hopeful that its =
+e-commerce sales from India may fare better than
+its global average of =
+8-10%. It will start off online sales from Mumbai next
+year. In the next few years, it will cover other cities as well where it =
+can be
+sure of handling fulfilment, delivery and assembling services.=20
+Tech cos under scanner for GST evasion
+[https://news.headhonchos.=
+com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=
+=3D296]
+ ET The indirect tax department has found that after GST was rolled=
+ out, several
+IT companies increased their capital expenditure by delaying =
+deliveries of
+orders placed before 1 July 2017. The earlier tax regime did =
+not allow for
+taking credit on such expenses and investments. About 100 =
+companies are under
+scrutiny and will have to prove that their transactions=
+ were legitimate.=20
+UPI 2.0 to allow transactions up to Rs 2 lakh
+[https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f264-418c-=
+a73e-52c89068339c&linkId=3D297]
+ ET The NPCI=E2=80=99s UPI feature is =
+getting an upgrade. People will get the option to
+send up to Rs 2 lakh, =
+double the current amount. But it is still fighting to get
+RBI=E2=80=99s approval for a feature to auto debit for repeat transactions.=
+ Another new
+feature is =E2=80=98block=E2=80=99 to set aside certain =
+amounts for use in particular instances.=20
+Bank of China gets a yes to =
+operate in India
+[https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D298]
+ Livemint The RBI has given an operating licence to Bank of China in =
+accordance
+with the Prime Minister=E2=80=99s promise to his Chinese =
+counterpart on the same. It is
+one of the few state-owned commercial banks =
+in the neighbouring country.=20
+[https://cdn.quezx.com/mailers/hh-education=
+/shrm/images/resume-writting.png]
+[https://news.headhonchos.=
+com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=
+=3D299]
+ Don't want to receive Career related News and content? Unsubscribe
+[https://news.headhonchos.com/unsubscribe/191958]
+----_NmP-9639a1ff3920fdc8-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+<!doctype html>
+<html>
+<head>
+<meta name=3D"viewport" =
+content=3D"width=3Ddevice-width">
+<meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3DUTF-8">
+<title>Simple Transactional =
+Email</title>
+<style media=3D"all" type=3D"text/css">
+@media only screen and (max-width: 620px) {
+  table[class=3Dbody] h1,
+  table[class=3Dbody] h2,
+  table[class=3Dbody] h3,
+  table[class=3Dbody] h4 {
+    font-weight: 600 !important;
+  }
+  table[class=3Dbody] h1 {
+    font-size: 22px !important;
+  }
+  table[class=3Dbody] h2 {
+    font-size: 18px !important;
+  }
+  table[class=3Dbody] h3 {
+    font-size: 16px !important;
+  }
+  table[class=3Dbody] .content,
+  table[class=3Dbody] .wrapper {
+    padding: 10px !important;
+  }
+  table[class=3Dbody] .container {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  table[class=3Dbody] .btn table,
+  table[class=3Dbody] .btn a {
+    width: 100% !important;
+  }
+}
+</style>
+</head>
+
+<body style=3D"margin: 0; font-family: 'Helvetica Neue', 'Helvetica', =
+Helvetica, Arial, sans-serif; font-size: 14px; height: 100% !important; =
+line-height: 1.6em; -webkit-font-smoothing: antialiased; padding: 0; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; width: 100% !=
+important; background-color: #f6f6f6;">
+
+<table class=3D"body" =
+style=3D"box-sizing: border-box; border-collapse: separate !important; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; =
+background-color: #f6f6f6;" width=3D"100%" bgcolor=3D"#f6f6f6">
+	<tr>
+		<td style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', =
+Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; =
+vertical-align: top;" valign=3D"top"></td>
+		<td class=3D"container" =
+style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, =
+Arial, 'Lucida Grande', sans-serif; font-size: 14px; vertical-align: top; =
+display: block; Margin: 0 auto !important; max-width: 600px; padding: 10px;=
+ width: 600px;" width=3D"600" valign=3D"top">
+			<div class=3D"content" =
+style=3D"box-sizing: border-box; display: block; margin: 0 auto; max-width:=
+ 600px; padding: 10px;">
+<table class=3D"main" cellspacing=3D"0" =
+cellpadding=3D"0" width=3D"100%" style=3D"box-sizing: border-box; =
+border-collapse: separate !important; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; width: 100%; background: #ffffff; border: 1px solid =
+#e9e9e9; border-radius: 3px;">
+    <tr>
+        <td style=3D"box-sizing: =
+border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida =
+Grande', sans-serif; font-size: 14px; vertical-align: top;" valign=3D"top">
+            <div class=3D"align-center" style=3D"box-sizing: border-box; =
+text-align: center; background: #072e5f; padding: 4px; width: 100%; =
+min-width: 100%; margin-top: 35px;">
+                <small style=3D"color:=
+ #fff;font-size: 10px;min-width: 100%">Daily Updates on Career, Startups & =
+Business 06 July 2018</small>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style=3D"box-sizing: border-box; font-family: =
+'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size:=
+ 14px; vertical-align: top;" valign=3D"top">
+            <div =
+class=3D"align-center h3 font-medium" style=3D"box-sizing: border-box; =
+text-align: center; font-size: 18px; font-weight: 600; background: #15408f;=
+ height: 50px; min-width: 100%;">
+                <img =
+style=3D"-ms-interpolation-mode: bicubic; max-width: 100%; width: 180px; =
+margin: 12px 0;" src=3D"https://cdn.quezx.com/img/hh/mailer/newsletter/hh-l=
+ogo-white.png" width=3D"180" alt=3D"">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style=3D"box-sizing: border-box; =
+font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-size: 14px; vertical-align: top; padding: 0 10px 10px;" =
+valign=3D"top">
+            <table cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"box-sizing: border-box; border-collapse: separate !important; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width=3D"100%">
+                <tr>
+                    <td style=3D"box-sizing: =
+border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida =
+Grande', sans-serif; font-size: 14px; vertical-align: top;" valign=3D"top">
+                        <a class=3D"align-center m-t-xs m-b-xs" =
+style=3D"box-sizing: border-box; text-align: center; margin-bottom: 5px; =
+margin-top: 5px; font-size: 11px;" target=3D"_blank" href=3D"https://news.=
+headhonchos.com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c890683=
+39c&linkId=3D290">
+                            <img =
+style=3D"-ms-interpolation-mode: bicubic; max-width: 100%; width: 100%;" =
+src=3D"https://cdn.quezx.com/img/hh/mailer/newsletter/hh-top-banner.png" =
+alt=3D"">
+                        </a>
+                                    =
+            <div class=3D"box-header-gray padder-xs m-b-md" =
+style=3D"box-sizing: border-box; background: #f4f4f4 !important; outline: =
+1px solid #e5e5e5 !important; color: #15408f; font-size: 14px; font-weight:=
+ 500;">
+                            <img alt=3D"" src=3D"https://cdn.quezx.=
+com/img/hh/mailer/newsletter/career.png" style=3D"-ms-interpolation-mode: =
+bicubic; max-width: 100%; width: 16px; vertical-align: middle; padding: 0 =
+4px;" width=3D"16">
+                            <span style=3D"color: =
+#333;">Career</span>
+                        </div>
+                        <div style=3D"box-sizing: border-box; background: =
+#fff;margin-left:20px;padding:10px 0 !important">
+                         =
+                                      <div style=3D"box-sizing: =
+border-box;"><a style=3D"box-sizing: border-box; text-decoration: none; =
+color:#23408f;font-weight: 500;padding-bottom: 5px;" target=3D"_blank" =
+href=3D"https://news.headhonchos.com/clickthrough?trackingId=3Dcc01b773-f26=
+4-418c-a73e-52c89068339c&linkId=3D291">How to slowly convert your side job =
+into your main one</a></div>
+                                   <div =
+style=3D"box-sizing: border-box; font-size: 12px; margin-top:-5px; =
+color:#a0a0a0;" class=3D"company m-t-xs">The Muse</div>
+                                   <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px;  font-size: 12px; padding: 0 !important; line-height: 1.=
+5em; color:#4e4e4e">
+
+                                                     =
+                                                        <div style=3D"">
+                                       <span style=3D"">
+                                           <span style=3D"">- Have the =
+courage to be consistent and focussed on what you wish to do<br>
+- Do your research on how you can scale it up<br>
+- Don=E2=80=99t rush into=
+ it. Ensure you are financially healthy and can sustain yourself through =
+the job<br>
+- Be seriously involved before you quit your full-time job.=
+&nbsp;
+                                           <br />
+                                           </span>
+                        =
+               </span>
+                                   </div>
+                                                                           =
+                   </div>
+                                                 =
+   </div>
+                                                                 =
+       <div class=3D"box-header-gray padder-xs m-b-md" style=3D"box-sizing:=
+ border-box; background: #f4f4f4 !important; outline: 1px solid #e5e5e5 !=
+important; color: #15408f; font-size: 14px; font-weight: 500;">
+                            <img alt=3D"" src=3D"https://cdn.quezx.=
+com/img/hh/mailer/newsletter/startup.png" style=3D"-ms-interpolation-mode: =
+bicubic; max-width: 100%; width: 16px; vertical-align: middle; padding: 0 =
+4px;" width=3D"16">
+                            <span style=3D"color: =
+#333;">Startups</span>
+                        </div>
+                        <div class=3D"padder-sm" style=3D"box-sizing: =
+border-box;margin-left:20px;padding:10px 0 !important;">
+                                                                    <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none; color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D292">Lending =
+company LoanTap rakes in $6.2 mn</a></div>
+                                =
+        <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">Inc42</div>
+                                        <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                        =
+<div style=3D"">
+                                            <span =
+style=3D"">
+                                                <span =
+style=3D"">LoanTap, another lending company, has raised $6.2 million in an =
+equity round. It gives flexible EMI free loan products to salaried =
+professionals. The RBI-registered NBFC provides a variety of facility such =
+as overdraft, credit card takeover loan, advance salary loan, consumer =
+durable loan, etc.&nbsp;
+                                                =
+<br />
+                                                </span>
+                                            </span>
+                                        </div>
+                            =
+                                                                           =
+      </div>
+                                                              =
+      <div style=3D"box-sizing: border-box;"><a style=3D"box-sizing: =
+border-box; text-decoration: none; color:#23408f;;padding-bottom: 5px; =
+font-weight: 500;" target=3D"_blank" href=3D"https://news.headhonchos.=
+com/clickthrough?trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=
+=3D293">Lifestyle buys 29.9% in Koovs</a></div>
+                           =
+             <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">Livemint</div>
+                                        <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                        =
+<div style=3D"">
+                                            <span =
+style=3D"">
+                                                <span =
+style=3D"">Kishore Biyani=E2=80=99s Lifestyle has bought a 29.9% in online =
+fashion brand Koovs for Rs 140 crore. Biyani wants to have a large presence=
+ in the online fashion space. Lifestyle operates about 400 stores. This =
+deal will see cross-selling of the brands on each other=E2=80=99s online =
+and offline spaces. &nbsp;
+                                                =
+<br />
+                                                </span>
+                                            </span>
+                                        </div>
+                            =
+                                                                           =
+      </div>
+                                                    </div>
+                       =20
+                                                =
+<div class=3D"box-header-gray padder-xs m-b-md" style=3D"box-sizing: =
+border-box; background: #f4f4f4 !important; outline: 1px solid #e5e5e5 !=
+important; color: #15408f; font-size: 14px; font-weight: 500;">
+                            <img alt=3D"" src=3D"https://cdn.quezx.=
+com/img/hh/mailer/newsletter/business.png" style=3D"-ms-interpolation-mode:=
+ bicubic; max-width: 100%; width: 16px; vertical-align: middle; padding: 0 =
+4px;" width=3D"16">
+                            <span style=3D"color: =
+#333;">Business</span>
+                        </div>
+                        <div class=3D"padder-sm" style=3D"box-sizing: =
+border-box; margin-left:20px;padding:10px 0 !important;">
+                                                                   <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none;color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D294">Google =
+Wi-Fi to go beyond stations</a></div>
+                                     =
+  <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">ET</div>
+                                       <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                     <div =
+style=3D"">
+                                           <span style=3D"">
+                                               <span style=3D"">Google is =
+all set to take its free internet service for India beyond railway stations=
+. It intends to target malls, universities and cafes as well. Google is in =
+talks with telcos, ISPs and state governments to make it available. 400 =
+railway stations currently have Google branded wifi services in partnership=
+ with RailTel.&nbsp;
+                                               <br />
+                                               </span>
+                                           </span>
+                        =
+               </div>
+                                                     =
+                                                     </div>
+                                                                   <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none;color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D295">Ikea =
+bullish on e-commerce from Mumbai</a></div>
+                               =
+        <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">ET</div>
+                                       <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                     <div =
+style=3D"">
+                                           <span style=3D"">
+                                               <span style=3D"">Ikea is =
+hopeful that its e-commerce sales from India may fare better than its =
+global average of 8-10%. It will start off online sales from Mumbai next =
+year. In the next few years, it will cover other cities as well where it =
+can be sure of handling fulfilment, delivery and assembling services.&nbsp;
+                                               <br />
+                                               </span>
+                                           </span>
+                        =
+               </div>
+                                                     =
+                                                     </div>
+                                                                   <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none;color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D296">Tech cos =
+under scanner for GST evasion</a></div>
+                                   =
+    <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">ET</div>
+                                       <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                     <div =
+style=3D"">
+                                           <span style=3D"">
+                                               <span style=3D"">The =
+indirect tax department has found that after GST was rolled out, several IT=
+ companies increased their capital expenditure by delaying deliveries of =
+orders placed before 1 July 2017. The earlier tax regime did not allow for =
+taking credit on such expenses and investments. About 100 companies are =
+under scrutiny and will have to prove that their transactions were =
+legitimate.&nbsp;
+                                               <br />
+                                               </span>
+                                           </span>
+                        =
+               </div>
+                                                     =
+                                                     </div>
+                                                                   <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none;color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D297">UPI 2.0 to =
+allow transactions up to Rs 2 lakh</a></div>
+                              =
+         <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">ET</div>
+                                       <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                     <div =
+style=3D"">
+                                           <span style=3D"">
+                                               <span style=3D"">The =
+NPCI=E2=80=99s UPI feature is getting an upgrade. People will get the =
+option to send up to Rs 2 lakh, double the current amount. But it is still =
+fighting to get RBI=E2=80=99s approval for a feature to auto debit for =
+repeat transactions. Another new feature is =E2=80=98block=E2=80=99 to set =
+aside certain amounts for use in particular instances.&nbsp;
+                                               <br />
+                                               </span>
+                                           </span>
+                        =
+               </div>
+                                                     =
+                                                     </div>
+                                                                   <div =
+style=3D"box-sizing: border-box;"><a style=3D"box-sizing: border-box; =
+text-decoration: none;color:#23408f;;padding-bottom: 5px; font-weight: =
+500;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D298">Bank of =
+China gets a yes to operate in India</a></div>
+                            =
+           <div style=3D"box-sizing: border-box; font-size: 12px; =
+margin-top:-5px;color:#a0a0a0;" class=3D"company m-t-xs">Livemint</div>
+                                       <div class=3D"paragraph" =
+style=3D"font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', =
+sans-serif; font-weight: normal; margin: 0; margin-bottom: 11px; =
+margin-top: 1px; color:#4e4e4e; font-size: 12px; padding: 0 !important; =
+line-height: 1.5em;">
+
+                                                    =
+                                                                     <div =
+style=3D"">
+                                           <span style=3D"">
+                                               <span style=3D"">The RBI has=
+ given an operating licence to Bank of China in accordance with the Prime =
+Minister=E2=80=99s promise to his Chinese counterpart on the same. It is =
+one of the few state-owned commercial banks in the neighbouring country. =
+&nbsp;
+                                               <br />
+                                               </span>
+                                           </span>
+                        =
+               </div>
+                                                     =
+                                                     </div>
+                                                    </div>
+                                            </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style=3D"box-sizing: border-box; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 14px; =
+vertical-align: top;" valign=3D"top">
+            <table cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"box-sizing: border-box; border-collapse: =
+separate !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: =
+100%;" width=3D"100%">
+                <tr>
+                    <td =
+style=3D"box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, =
+Arial, 'Lucida Grande', sans-serif; font-size: 14px; vertical-align: top;" =
+valign=3D"top">
+                    <div style=3D" max-height: 85px;">
+                        <a class=3D"align-center" style=3D"font-family: =
+'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size:=
+ 14px; font-weight: normal; margin: 0; text-align: center; margin-bottom: =
+0;" target=3D"_blank" href=3D"https://news.headhonchos.com/clickthrough?=
+trackingId=3Dcc01b773-f264-418c-a73e-52c89068339c&linkId=3D299">
+                            <img style=3D"-ms-interpolation-mode: bicubic; =
+max-width: 100%; width: 100%; max-height: 85px;" alt=3D"" =
+src=3D"https://cdn.quezx.com/mailers/hh-education/shrm/images/resume-writti=
+ng.png">
+                        </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style=3D"box-sizing: =
+border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida =
+Grande', sans-serif; font-size: 14px; vertical-align: top;" valign=3D"top">
+            <table cellspacing=3D"0" cellpadding=3D"0" style=3D"box-sizing:=
+ border-box; border-collapse: separate !important; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; width: 100%;" width=3D"100%">
+                <tr>
+                    <td style=3D"box-sizing: border-box; font-family: =
+'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size:=
+ 14px; vertical-align: top;" valign=3D"top">
+                        <p =
+class=3D"align-center unsubscribe padder-sm" style=3D"font-family: =
+'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; =
+font-weight: normal; margin: 0; font-size: 11.5px; text-align: center; =
+padding: 10px !important; margin-top: 0; margin-bottom: 0; background: =
+#f4f4f4; color: #333;">
+                            Don't want to receive =
+Career related News and content?
+                            <a =
+href=3D"https://news.headhonchos.com/unsubscribe/191958" =
+style=3D"box-sizing: border-box; color: #15408f; text-decoration: none !=
+important;">Unsubscribe</a>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+		</td>
+		<td style=3D"box-sizing: =
+border-box; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida =
+Grande', sans-serif; font-size: 14px; vertical-align: top;" =
+valign=3D"top"></td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+<img src=3D"https://news.headhonchos.com/trackopen?trackingId=3Dd33020a0-6f=
+28-449c-a18e-0ade16dd3a92" style=3D"display:none" =
+alt=3D"=E2=A0=80">
+----_NmP-9639a1ff3920fdc8-Part_1--
+
+--w6AM2E2Z020287.1531325936/relay1.soft.net--
