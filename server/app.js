@@ -1,7 +1,7 @@
 
 const http = require('http');
 const express = require('express');
-
+const inBoundSMPTServer = require('./conn/smtpServer/inBound.js');
 const config = require('./config/environment');
 const { User, EmailIdentity } = require('./conn/sqldb');
 
@@ -26,6 +26,10 @@ process.on('unhandledRejection', (reason, p) => {
 
 process.on('uncaughtException', (err) => {
   log('uncaughtException', err);
+});
+
+inBoundSMPTServer.listen(config.BOUNCE_EMAILS_SMPT_PORT, config.BOUNCE_EMAILS_SMPT_HOST, () => {
+  console.log(`Bounce emails listening on: ${config.BOUNCE_EMAILS_SMPT_PORT}`);
 });
 
 const server = http.createServer(app);

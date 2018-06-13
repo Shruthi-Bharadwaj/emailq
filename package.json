@@ -15,6 +15,7 @@
     "sns:publish": "aws sns publish --topic-arn \"arn:aws:sns:us-west-2:831107063919:my-topic\" --message file://message.txt --endpoint-url http://localhost:1587 --debug",
     "aws-sns:publish": "aws sns publish --topic-arn \"arn:aws:sns:us-west-2:831107063919:my-topic\" --message file://message.txt --debug",
     "postinstall": "node ./node_modules/sequelize-cli/lib/sequelize db:migrate",
+    "swaks:bounce": "swaks --to user@localhost --body server/components/bounce.eml -p 3025",
     "swaks:2525": "swaks -f manjesh@campus2community.org -t manjeshpv@testses1.shoppre.com,super@supermanjesh.com -s localhost -p 2525 -au smtpuser -ap smtppassword",
     "server:smtp-outbound": "cd smtp-outbound && haraka -c .",
     "server:demo-gmail-smtp": "sudo -S maildev -s 25",
