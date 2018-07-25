@@ -4,6 +4,7 @@ const debug = require('debug');
 const hbs = require('handlebars');
 const addressparser = require('addressparser');
 const { simpleParser } = require('mailparser');
+const rp = require('request-promise');
 
 const { nodeMailer, nodeMailerSendRawEmail } = require('../../conn/nodeMailer');
 const { Template } = require('../../conn/sqldb');
@@ -47,6 +48,38 @@ const validEmails = (emails) => {
   return valid;
 };
 
+exports.click = (req, res, next) => {
+  res.redirect(req.query.url);
+  const body = {
+    eventType: 'Click',
+    mail: {
+      messageId: req.query.messageId,
+    },
+    click: {
+      ipAddress: req.connection.remoteAddress,
+      link: req.query.url,
+      linkTags: {
+        samplekey0: [
+          'samplevalue0',
+        ],
+        samplekey1: [
+          'samplevalue1',
+        ],
+      },
+      timestamp: (new Date()).toISOString(),
+      userAgent: req.get('User-Agent'),
+    },
+  };
+
+  return rp({
+    method: 'POST',
+    uri: SNS_HOOK,
+    body,
+    json: true,
+  })
+    .catch(next);
+};
+
 exports.verify = (req, res, next) => verifyEmailIdentity(req.body.EmailAddress)
   .then(() => res
     .end(responses['verify-email-identity'].success))
@@ -55,6 +88,7 @@ exports.verify = (req, res, next) => verifyEmailIdentity(req.body.EmailAddress)
 
 exports.SendTemplatedEmail = (req, res, next) => {
   const body = unflatten(req.body);
+
   const email = _.omit(body, ['TemplateData', 'Template']);
 
   const emailIdentity = addressparser(email.Source)[0].address;
