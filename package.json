@@ -7,6 +7,7 @@
     "kill": "kill -9 $(lsof -t -i:1587);",
     "login": "NODE_ENV=test mocha --opts .mocharc server/config/auth/jwt.spec.js --exit",
     "postinstall": "node ./node_modules/sequelize-cli/lib/sequelize db:migrate",
+    "server:smtp-outbound": "cd smtp-outbound && haraka -c .",
     "clear-db": "rm ~/emailq.sqlite",
     "test": "mocha server/api/**/*.spec.js",
     "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
