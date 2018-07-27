@@ -30,6 +30,7 @@ const { DOMAIN_IDENTITY, EMAIL_IDENTITY } = require('../../config/environment');
 const unflatten = require('../../components/utils/unflatten');
 
 const log = debug('email.controller:api');
+const pixelGif = new Buffer('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64');
 
 const validEmails = (emails) => {
   const ajv = new Ajv();
@@ -50,13 +51,18 @@ const validEmails = (emails) => {
 
 exports.click = (req, res, next) => {
   res.redirect(req.query.url);
+  const ipAddress = req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;
+
   const body = {
     eventType: 'Click',
     mail: {
       messageId: req.query.messageId,
     },
     click: {
-      ipAddress: req.connection.remoteAddress,
+      ipAddress,
       link: req.query.url,
       linkTags: {
         samplekey0: [
@@ -71,12 +77,95 @@ exports.click = (req, res, next) => {
     },
   };
 
-  return rp({
-    method: 'POST',
-    uri: SNS_HOOK,
-    body,
-    json: true,
-  })
+  return sns(body)
+    .catch(next);
+};
+
+
+exports.open = (req, res, next) => {
+  res
+    .writeHead(200, {
+      'Content-Type': 'image/gif',
+      'Content-Length': pixelGif.length,
+    });
+
+  res.end(pixelGif);
+
+  const ipAddress = req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;
+
+  const body = {
+    eventType: 'Open',
+    mail: {
+      commonHeaders: {
+        from: [
+          'sender@example.com',
+        ],
+        messageId: req.query.messageId,
+        subject: 'Message sent from Amazon SES',
+        to: [
+          'recipient@example.com',
+        ],
+      },
+      destination: [
+        'recipient@example.com',
+      ],
+      headers: [
+        {
+          name: 'X-SES-CONFIGURATION-SET',
+          value: 'ConfigSet',
+        },
+        {
+          name: 'From',
+          value: 'sender@example.com',
+        },
+        {
+          name: 'To',
+          value: 'recipient@example.com',
+        },
+        {
+          name: 'Subject',
+          value: 'Message sent from Amazon SES',
+        },
+        {
+          name: 'MIME-Version',
+          value: '1.0',
+        },
+        {
+          name: 'Content-Type',
+          value: 'multipart/alternative; boundary="XBoundary"',
+        },
+      ],
+      headersTruncated: false,
+      messageId: req.query.messageId,
+      sendingAccountId,
+      source: 'sender@example.com',
+      tags: {
+        'ses:caller-identity': [
+          'ses-user',
+        ],
+        'ses:configuration-set': [
+          'ConfigSet',
+        ],
+        'ses:from-domain': [
+          'example.com',
+        ],
+        'ses:source-ip': [
+          '192.0.2.0',
+        ],
+      },
+      timestamp: '2017-08-09T21:59:49.927Z',
+    },
+    open: {
+      ipAddress,
+      timestamp: (new Date()).toISOString(),
+      userAgent: req.get('User-Agent'),
+    },
+  };
+
+  return sns(body)
     .catch(next);
 };
 

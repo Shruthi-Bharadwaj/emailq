@@ -2,10 +2,17 @@ const uuidv1 = require('uuid/v1');
 const logger = require('../../components/logger');
 const connection = require('./connection');
 const postalConnection = require('./postal-connection');
-const { CONFIGURATIONS, AWSRegion, AWSDomain } = require('../../config/environment');
-const wrapLink = require('./wrapLink');
+const {
+  CONFIGURATIONS, AWSRegion, AWSDomain, CONFIGURATION_SET,
+} = require('../../config/environment');
+const { wrapLink, pxl } = require('./tracking');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
+const configSetMap = (CONFIGURATIONS || '')
+  .split(',')
+  .reduce((nxt, key) => Object
+    .assign(nxt, { [key]: true }), {});
 
 const transporter = {
   sendMail(mail, callback) {
@@ -46,9 +53,9 @@ function nodeMailer(email, TemplateName = false) {
 
   if (email.Message.Body.Html && email.Message.Body.Html.Data) {
     mail.messageId = generateMessageId(uuidv1());
-
-    if (CONFIGURATIONS.split(',').includes('click')) mail.html = wrapLink(email.Message.Body.Html.Data, mail.messageId);
-    else mail.html = email.Message.Body.Html.Data;
+    const { Data } = email.Message.Body.Html;
+    mail.html = configSetMap.click ? wrapLink(Data, mail.messageId) : Data;
+    mail.html = configSetMap.open ? `${Data}${pxl(mail.messageId)}` : Data;
   }
 
   const cc = m.Destination.CcAddresses ? Object.values(m.Destination.CcAddresses.member) : [];
@@ -62,11 +69,9 @@ function nodeMailer(email, TemplateName = false) {
   // if (email.Message.Body.Text.Data) mail.text = email.Message.Body.Text.Data
 
   // Tracking in postal https://github.com/atech/postal
-  if (TemplateName) {
-    mail.headers = {
-      'x-postal-tag': TemplateName,
-    };
-  }
+  mail.headers = {};
+  if (TemplateName) mail.headers['x-postal-tag'] = TemplateName;
+  if (CONFIGURATION_SET) mail.headers['X-SES-CONFIGURATION-SET'] = CONFIGURATION_SET;
 
   return new Promise((resolve, reject) => {
     transporter.sendMail(mail, (error, i) => {
