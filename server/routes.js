@@ -11,6 +11,7 @@ const EmailCtrl = require('./api/email/email.controller');
 
 const template = require('./api/template');
 const logger = require('./components/logger');
+const awsv4 = require('./conn/nodeMailer/awsv4');
 
 const log = debug('emailq.routes');
 
@@ -60,6 +61,7 @@ module.exports = (app) => {
     if (req.method !== 'POST') return next();
     log('request', JSON.stringify(req.body));
     switch (req.body.Action) {
+      case 'VerifyEmailIdentity': return EmailCtrl.verify(req, res, next);
       case 'CreateTemplate': return TemplateCtrl.create(req, res, next);
       case 'SendEmail': return EmailCtrl.create(req, res, next);
       case 'SendBulkTemplatedEmail': return EmailCtrl.SendBulkTemplatedEmail(req, res, next);
@@ -79,7 +81,14 @@ module.exports = (app) => {
   app.use('/templates', template);
   app.get('/emails', (req, res) => res.json(EMAIL_IDENTITY.split(',')));
   app.get('/domains', (req, res) => res.json(DOMAIN_IDENTITY.split(',')));
-  app.get('/', (req, res) => res.json({ name, version }));
+  app.get('/', (req, res) => {
+    const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+    if (awsv4.verifyUrl(fullUrl)) {
+      res.end('verified');
+    }
+
+    res.json({ name, version });
+  });
   app.use(logger.transports.sentry.raven.errorHandler());
   // All undefined asset or api routes should return a 404
   app.use((e, req, res, next) => {

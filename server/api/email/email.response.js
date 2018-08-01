@@ -13,7 +13,14 @@ function generateSendRawEmailSuccessXMLResponse(messageId) {
 }
 
 module.exports = () => ({
-
+  'verify-email-identity': {
+    success: `<VerifyEmailIdentityResponse xmlns="http://ses.amazonaws.com/doc/2010-12-01/">
+   <VerifyEmailIdentityResult/>
+   <ResponseMetadata>
+     <RequestId>e4442c03-93d5-11e8-b567-1d80dc45c510</RequestId>
+   </ResponseMetadata>
+ </VerifyEmailIdentityResponse>`,
+  },
   blankDestination: `<ErrorResponse xmlns="http://ses.amazonaws.com/doc/2010-12-01/">
   <Error>
     <Type>Sender</Type>

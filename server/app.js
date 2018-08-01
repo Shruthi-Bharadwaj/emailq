@@ -33,6 +33,8 @@ if (config.env !== 'test') {
     log('\n######################################################');
     log('## EmailQ: Amazon SES Compatible                    ##');
     log('######################################################\n##');
+    log(`## AWSAccountId: ${config.AWSAccountId}`);
+    log(`## AWSRegionName: ${config.AWSRegionName}`);
     log(`## AWSAccessKeyId: ${config.AWSAccessKeyId}`);
     log(`## AWSSecretKey: ${config.AWSSecretKey}`);
     log(`## AWSSecretKey: ${config.AWSRegion}`);

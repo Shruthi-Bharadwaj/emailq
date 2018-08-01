@@ -8,6 +8,9 @@ const { simpleParser } = require('mailparser');
 const { nodeMailer, nodeMailerSendRawEmail } = require('../../conn/nodeMailer');
 const { Template } = require('../../conn/sqldb');
 const logger = require('../../components/logger');
+const { verifyEmailIdentity } = require('./email.notification');
+const responses = require('./email.response')();
+
 const {
   blankDestination,
   blankToErrorXml,
@@ -20,7 +23,7 @@ const {
   createxmlError,
   sendRawEmailSuccessXMLResponse,
   missingFromParameterXMLResponse,
-} = require('./email.response')();
+} = responses;
 const { DOMAIN_IDENTITY, EMAIL_IDENTITY } = require('../../config/environment');
 
 const unflatten = require('../../components/utils/unflatten');
@@ -44,9 +47,14 @@ const validEmails = (emails) => {
   return valid;
 };
 
+exports.verify = (req, res, next) => verifyEmailIdentity(req.body.EmailAddress)
+  .then(() => res
+    .end(responses['verify-email-identity'].success))
+  .catch(next);
+
+
 exports.SendTemplatedEmail = (req, res, next) => {
   const body = unflatten(req.body);
-
   const email = _.omit(body, ['TemplateData', 'Template']);
 
   const emailIdentity = addressparser(email.Source)[0].address;

@@ -1,5 +1,5 @@
 const { Template } = require('../../conn/sqldb');
-const { AccountId } = require('../../config/environment');
+const { AWSAccountId } = require('../../config/environment');
 const unflatten = require('../../components/utils/unflatten');
 const logger = require('../../components/logger');
 
@@ -29,7 +29,7 @@ exports.create = (req, res) => {
         <Error>
           <Type>Sender</Type>
           <Code>AlreadyExists</Code>
-          <Message>Template ${template.TemplateName} already exists for account id ${AccountId}${
+          <Message>Template ${template.TemplateName} already exists for account id ${AWSAccountId}${
   e.name === 'SequelizeUniqueConstraintError' ? '500' : ''
 }</Message>
 
