@@ -5,7 +5,10 @@
 const debug = require('debug');
 const { name, version } = require('../package.json');
 
-const { EMAIL_IDENTITY, DOMAIN_IDENTITY, DAILY_LIMIT, MAX_SEND_RATE } = require('./config/environment');
+const {
+  EMAIL_IDENTITY, DOMAIN_IDENTITY, DAILY_LIMIT, MAX_SEND_RATE,
+  AWSUser, AWSPassword,
+} = require('./config/environment');
 const TemplateCtrl = require('./api/template/template.controller');
 const EmailCtrl = require('./api/email/email.controller');
 
@@ -14,6 +17,7 @@ const logger = require('./components/logger');
 const awsv4 = require('./conn/nodeMailer/awsv4');
 
 const log = debug('emailq.routes');
+const authJwt = require('./config/auth/jwt');
 
 const quotaResultXML = `<GetSendQuotaResponse xmlns="http://ses.amazonaws.com/doc/2010-12-01/">
   <GetSendQuotaResult>
@@ -78,8 +82,18 @@ module.exports = (app) => {
       default: return next();
     }
   });
+
+  app.use('/auth/token', (req, res) => {
+    const auth = req.body.username ? req.body : req.query;
+    const { username, password } = auth;
+    if (username === AWSUser && password === AWSPassword) {
+      return res.json({ access_token: authJwt.sign({ username: AWSUser }) });
+    }
+    return res.status(400).json({ message: 'Please enter valid username & password' });
+  });
+
   app.use('/templates', template);
-  app.get('/emails', (req, res) => res.json(EMAIL_IDENTITY.split(',')));
+  app.get('/api/emails', authJwt.authenticate, (req, res) => res.json(EMAIL_IDENTITY.split(',')));
   app.get('/domains', (req, res) => res.json(DOMAIN_IDENTITY.split(',')));
   app.get('/', (req, res) => {
     const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;

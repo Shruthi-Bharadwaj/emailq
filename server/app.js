@@ -33,7 +33,15 @@ if (config.env !== 'test') {
     log('\n######################################################');
     log('## EmailQ: Amazon SES Compatible                    ##');
     log('######################################################\n##');
+    log(`## AmazonDomain: ${config.AmazonDomain}`);
+    log(`## AWSDomain: ${config.AWSDomain}`);
+    log(`## AWSUser: ${config.AWSUser}`);
+    log(`## AWSPassword: ${config.AWSPassword}`);
     log(`## AWSAccountId: ${config.AWSAccountId}`);
+    log(`## Current SES Dashboard: ${config.AWSRegion}.console.aws.${config.AmazonDomain}`);
+    log(`## SES VerificationDomain: email-verification.${config.AWSRegion}.${config.AWSDomain}`);
+    log(`## SESDomain: ${config.SESDomain}`);
+    log(`## AWSRegion: ${config.AWSRegion}`);
     log(`## AWSRegionName: ${config.AWSRegionName}`);
     log(`## AWSAccessKeyId: ${config.AWSAccessKeyId}`);
     log(`## AWSSecretKey: ${config.AWSSecretKey}`);
