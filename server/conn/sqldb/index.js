@@ -17,7 +17,7 @@ const db = {
   sequelize: new Sequelize('emailq', null, null, sqlDefaults),
 };
 
-['Template'].forEach((model) => {
+['User', 'Template', 'EmailIdentity'].forEach((model) => {
   db[model] = db.sequelize.import(`../../api/${_.camelCase(model)}/${_.camelCase(model)}.model.js`);
 });
 

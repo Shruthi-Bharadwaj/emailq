@@ -11,6 +11,7 @@ const {
 } = require('./config/environment');
 const TemplateCtrl = require('./api/template/template.controller');
 const EmailCtrl = require('./api/email/email.controller');
+const emailIdentity = require('./api/emailIdentity');
 
 const template = require('./api/template');
 const logger = require('./components/logger');
@@ -93,7 +94,7 @@ module.exports = (app) => {
   });
 
   app.use('/templates', template);
-  app.get('/api/emails', authJwt.authenticate, (req, res) => res.json(EMAIL_IDENTITY.split(',')));
+  app.use('/api/emailIdentities', authJwt.authenticate, emailIdentity);
   app.get('/domains', (req, res) => res.json(DOMAIN_IDENTITY.split(',')));
   app.get('/', (req, res) => {
     const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;

@@ -3,6 +3,8 @@ const http = require('http');
 const express = require('express');
 
 const config = require('./config/environment');
+const { User, EmailIdentity } = require('./conn/sqldb');
+
 
 const { log } = console;
 const app = express();
@@ -30,6 +32,26 @@ const server = http.createServer(app);
 
 if (config.env !== 'test') {
   server.listen(port, host, () => {
+    User
+      .count()
+      .then((count) => {
+        if (count) return null;
+
+        return User
+          .create({
+            Username: config.AWSUser,
+            Password: config.AWSPassword,
+          })
+          .then((user) => {
+            log('user created', user.toJSON());
+            return config.EMAIL_IDENTITY
+              .split(',')
+              .map(email => EmailIdentity
+                .create({ Email: email, UserId: user.id }));
+          });
+      })
+      .catch(err => log('error', err));
+
     log('\n######################################################');
     log('## EmailQ: Amazon SES Compatible                    ##');
     log('######################################################\n##');

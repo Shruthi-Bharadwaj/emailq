@@ -1,9 +1,6 @@
 const addressparser = require('addressparser');
 const { expect } = require('chai');
-const request = require('supertest');
 
-const app = require('../../app');
-const auth = require('../../../logs/credentials');
 const sesEmail = require('../template/data/CreateTemplate.cmd');
 const { Template } = require('../../conn/sqldb');
 const ses = require('../../conn/ses/config');
@@ -19,19 +16,6 @@ async function createTemplate() {
   const { Template: template } = unflatten(sesEmail);
   return Template.create(template);
 }
-
-describe('GET /api/emails', () => {
-  it('return address', (done) => {
-    request(app)
-      .get('/api/emails')
-      .set('Authorization', `Bearer ${auth.access_token}`)
-      .expect('Content-Type', /json/)
-      .expect(200)
-      .then(() => {
-        done();
-      });
-  });
-});
 
 describe('addressparser', () => {
   it('should return email', (done) => {

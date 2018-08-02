@@ -10,7 +10,7 @@
     "clear-db": "rm ~/emailq.sqlite",
     "test": "mocha server/api/**/*.spec.js",
     "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
-    "sequlize": "sequelize db:migrate",
+    "migrate": "sequelize db:migrate",
     "dev": "nodemon --ignore node_modules/ -e js ./server/app",
     "maildev": "maildev",
     "test-cmd": "npm-run-all create* update* send*;",
