@@ -4,9 +4,9 @@ const debug = require('debug');
 const hbs = require('handlebars');
 const addressparser = require('addressparser');
 const { simpleParser } = require('mailparser');
-const rp = require('request-promise');
 
 const { nodeMailer, nodeMailerSendRawEmail } = require('../../conn/nodeMailer');
+const AWS = require('../../conn/aws');
 const { Template } = require('../../conn/sqldb');
 const logger = require('../../components/logger');
 const { verifyEmailIdentity } = require('./email.notification');
@@ -25,7 +25,9 @@ const {
   sendRawEmailSuccessXMLResponse,
   missingFromParameterXMLResponse,
 } = responses;
-const { DOMAIN_IDENTITY, EMAIL_IDENTITY } = require('../../config/environment');
+const {
+  DOMAIN_IDENTITY, EMAIL_IDENTITY, AWSRegion, AWSAccountId, TopicName,
+} = require('../../config/environment');
 
 const unflatten = require('../../components/utils/unflatten');
 
@@ -47,6 +49,22 @@ const validEmails = (emails) => {
 
   // if (!valid) throw new Error(ajv.errorsText());
   return valid;
+};
+const sns = new AWS.SNS({
+
+});
+
+const snsWrapper = {
+  publish(endpointArn, p) {
+    const payload = JSON.stringify(p);
+    const params = {
+      Message: payload,
+      MessageStructure: 'json',
+      TargetArn: endpointArn,
+    };
+
+    return sns.publishAsync(params);
+  },
 };
 
 exports.click = (req, res, next) => {
@@ -77,7 +95,7 @@ exports.click = (req, res, next) => {
     },
   };
 
-  return sns(body)
+  return snsWrapper.publish(`arn:aws:sns:${AWSRegion}:${AWSAccountId}:${TopicName}`, body)
     .catch(next);
 };
 
@@ -140,7 +158,7 @@ exports.open = (req, res, next) => {
       ],
       headersTruncated: false,
       messageId: req.query.messageId,
-      sendingAccountId,
+      sendingAccountId: AWSAccountId,
       source: 'sender@example.com',
       tags: {
         'ses:caller-identity': [

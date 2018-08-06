@@ -8,3 +8,6 @@ logs/*
 package-lock.json
 /coverage/
 /.nyc_output/
+/topics.json
+/subscriptions.json
+

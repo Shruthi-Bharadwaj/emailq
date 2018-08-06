@@ -1,5 +1,5 @@
 const aws = require('aws-sdk');
-const { AWSRegion, AWSEndPoint, AWSAccessKeyId, AWSSecretKey } = require('./../../config/environment');
+const { AWSRegion, AWSEndPoint, AWSAccessKeyId, AWSSecretKey } = require('../config/environment');
 
 const ses = new aws.SES({
   region: AWSRegion,

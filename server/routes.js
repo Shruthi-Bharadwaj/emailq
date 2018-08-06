@@ -10,6 +10,7 @@ const {
   AWSUser, AWSPassword,
 } = require('./config/environment');
 const TemplateCtrl = require('./api/template/template.controller');
+const TopicController = require('./api/topic/topic.controller');
 const EmailCtrl = require('./api/email/email.controller');
 const emailIdentity = require('./api/emailIdentity');
 
@@ -66,6 +67,12 @@ module.exports = (app) => {
     if (req.method !== 'POST') return next();
     log('request', JSON.stringify(req.body));
     switch (req.body.Action) {
+      // - SNS
+      case 'Subscribe': return TopicController.subscribe(req, res, next);
+      case 'Publish': return TopicController.publish(req, res, next);
+      case 'CreateTopic': return TopicController.create(req, res, next);
+
+      // - SES
       case 'VerifyEmailIdentity': return EmailCtrl.verify(req, res, next);
       case 'CreateTemplate': return TemplateCtrl.create(req, res, next);
       case 'SendEmail': return EmailCtrl.create(req, res, next);
